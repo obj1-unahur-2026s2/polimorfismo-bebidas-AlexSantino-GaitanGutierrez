@@ -1,9 +1,19 @@
-import example.pepita
+import example.*
 
-describe "group of tests for pepita" {
+describe "test de bebida" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "la velovidad de tito con sus valores iniciales es " {
+    assert.equals(7, tito.velocidad())
   }
-
-}
+  test "la velocidad de pepe si consume 10 de cianuro es" {
+    pepe.consumir(10, cianuro)
+    assert.equals(10.8 * 490 / 80, pepe.velocidad())
+  }
+  test "Tito es si corre a mas de 7 de velocidad" {
+    assert.that (tito.esFeliz())}
+  
+  test "tito no es feliz si consume cianuro" {
+      tito.consumir(10, cianuro)
+      assert.that (not tito.esFeliz())
+    }
+  }
